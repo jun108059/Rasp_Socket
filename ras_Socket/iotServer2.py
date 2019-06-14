@@ -83,7 +83,7 @@ class IoTRequestHandler(socketserver.StreamRequestHandler):
 logging.basicConfig(filename='', level=logging.DEBUG,
                     format = '%(asctime)s:%(levelname)s:%(message)s')
 
-serv_addr = ("", 10077)
+serv_addr = ("", 9600)
 with socketserver.ThreadingTCPServer(serv_addr, IoTRequestHandler) as server:
     logging.info('Server starts: {}'.format(serv_addr)) # port 번호가 10007인 서버를 연다고 말해준다
     server.serve_forever()
