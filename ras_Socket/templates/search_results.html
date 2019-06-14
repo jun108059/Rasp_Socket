@@ -1,0 +1,10 @@
+<!-- templates/search_results.html -->
+<h1>YoungJun's DB Search Results</h1>
+
+<ul>
+  {% for search in object_list %}
+    <li>
+      {{ search.name }}, {{ search.state }}
+    </li>
+  {% endfor %}
+</ul>
